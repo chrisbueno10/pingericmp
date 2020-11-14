@@ -140,12 +140,12 @@ def ping(host, timeout=1):
    packet_max= max(difPings)
    packet_avg = statistics.mean(difPings)
    stdev_var = statistics.stdev(difPings)
-   vars = [str(round(packet_min, '2')), str(round(packet_avg, '2')), str(round(packet_max, '2')), str(round(stdev_var), '2')]
+   vars = [str(round(packet_min, 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)), str(round(stdev_var), 2)]
 
    return vars
 
 if __name__ == '__main__':
-   ping("No.no.e")
+   ping("google.co.il")
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
