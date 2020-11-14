@@ -138,9 +138,9 @@ def ping(host, timeout=1):
        return vars
    packet_min = min(difPings)
    packet_max= max(difPings)
-   packet_avg = mean(difPings)
-   stdev_var = stdev(difPings)
-   vars = [str(round(packet_min, 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)), str(round(stdev(stdev_var), 2))]
+   packet_avg = statistics.mean(difPings)
+   stdev_var = statistics.stdev(difPings)
+   vars = [str(round(packet_min, 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)), str(round(stdev_var), 2)]
 
    return vars
 
