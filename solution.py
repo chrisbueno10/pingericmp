@@ -11,7 +11,7 @@ import struct
 import sys
 import time
 from socket import *
-import statistics
+from statistics
 
 
 #Should use stdev
@@ -139,7 +139,7 @@ def ping(host, timeout=1):
    packet_min = min(difPings)
    packet_max= max(difPings)
    packet_avg = mean(difPings)
-   stdev_var=stdev(difPings)
+   stdev_var = stdev(difPings)
    vars = [str(round(packet_min, 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)), str(round(stdev(stdev_var), 2))]
 
    return vars
