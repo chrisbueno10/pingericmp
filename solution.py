@@ -135,7 +135,7 @@ def ping(host, timeout=1):
        difPings.append(delay)
        time.sleep(1)  # one second
    if timedOut == True:
-       return vars
+       return difPings
    packet_min = min(difPings)
    packet_max= max(difPings)
    packet_avg = statistics.mean(difPings)
