@@ -11,6 +11,7 @@ import struct
 import sys
 import time
 from socket import *
+import statistics
 
 
 #Should use stdev
