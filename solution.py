@@ -63,7 +63,7 @@ def receiveOnePing(mySocket, ID, timeout, destAddr):
        if type != 8 and ID == r_id:
            bytesInDouble = struct.calcsize('d')
            timeData= struct.unpack('d', recPacket[28:28 + bytesInDouble]) [0]
-           return timeReceived - timeData
+           return (timeReceived - timeData) * 1000
        else:
            return "Different ID"
 
@@ -136,7 +136,7 @@ def ping(host, timeout=1):
        time.sleep(1)  # one second
    if timedOut == True:
        return difPings
-   packet_min = min(difPings)
+   packet_min = min(difPings) 
    packet_max= max(difPings)
    packet_avg = statistics.mean(difPings)
    stdev_var = statistics.stdev(difPings)
